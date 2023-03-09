@@ -1,8 +1,8 @@
 <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg" style="background-color: #132257;">
         <div class="container">
             <div class="container d-flex">
-                <a class="navbar-brand" href="{{ url('/') }}">CHEAPTALK</a>
+                <a class="navbar-brand text-white" href="{{ url('/') }}">CHEAPTALK</a>
             
             <!-- <form class="d-flex"> -->
                 <!-- <input class="form-control me-2 w-25" type="search" placeholder="Search" aria-label="Search"> -->
@@ -16,10 +16,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link text-white" aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                        <a class="nav-link" aria-current="page" href="{{ url('/categories') }}">Categories</a>
+                        <a class="nav-link text-white" aria-current="page" href="{{ url('/categories') }}">Categories</a>
                     <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Category
                     </a>

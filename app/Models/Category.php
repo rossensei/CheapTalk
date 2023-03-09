@@ -17,4 +17,14 @@ class Category extends Model
     public function posts() {
         return $this->hasMany('App\Models\Post');
     }
+
+    public function scopeSearch($query, $terms) {
+      collect(explode(" ", $terms))
+          ->filter()
+          ->each(function ($term) use ($query) {
+              $term = "%" . $term . "%";
+
+              $query->where('category', 'like', $term);
+          });
+  }
 }

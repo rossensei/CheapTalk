@@ -4,19 +4,26 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Post;
+use App\Models\Category;
 
 class PostComponent extends Component
 {
 
-    public $category = 'all', $search;
+    public $selectedCategory = "all", $search;
+    public $categories;
+
+    public function mount(){
+        $this->categories = Category::all();
+
+    }
 
     public function render()
     {
         $query = Post::orderBy('created_at', 'desc')->search($this->search);
         // $posts = Post::with('category')->get();
 
-        if($this->category != 'all'){
-            $query->where('category_id', $this->category);
+        if($this->selectedCategory != 'all'){
+            $query->where('category_id', $this->selectedCategory);
         }
 
         $posts = $query->get();

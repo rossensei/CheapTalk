@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\PostComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\CreatePost;
+use App\Http\Livewire\CreateCategory;
 
 
 /*
@@ -24,3 +25,4 @@ use App\Http\Livewire\CreatePost;
 Route::get('/', PostComponent::class)->name('posts');
 Route::get('/create-post', CreatePost::class)->name('create-post');
 Route::get('/categories', CategoryComponent::class)->name('categories');
+Route::get('/add-category', CreateCategory::class)->name('add-category');
